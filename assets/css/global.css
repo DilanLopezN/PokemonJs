@@ -18,10 +18,9 @@
     max-width: 992px;
     margin: 0 auto;
   }
-  .pokemonContainer {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    width: 500px;
+  .pokemonContainer .pokemonContent {
+    width: 400px;
+    border: 1px solid black;
   }
 }
 
@@ -54,7 +53,7 @@
 .pokemonTypes .type {
   margin-top: 0.5rem;
   border-radius: 1rem;
-  background-color: rgb(76, 196, 188);
+  filter: brightness(1.1);
 }
 
 .pokemonContent .pokemonDetails,
@@ -72,6 +71,7 @@
 .pokemonContent .pokemonName {
   color: white;
   font-size: 1rem;
+  text-transform: capitalize;
 }
 
 .normal {
@@ -144,4 +144,22 @@
 
 .fairy {
   background-color: #f9aec7;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+#loadMore {
+  background-color: #bfdcea;
+  border-radius: 1rem;
+  border: none;
+  width: 150px;
+  font-size: 1rem;
 }

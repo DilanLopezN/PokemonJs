@@ -2,7 +2,7 @@ const apiPoke = {}
 
 function convertPokeDetails(pokeDetail) {
   const pokemon = new Pokemon()
-  pokemon.number = pokeDetail.order
+  pokemon.number = pokeDetail.id
   pokemon.name = pokeDetail.name
 
   const types = pokeDetail.types.map(typeSlot => typeSlot.type.name)
@@ -20,7 +20,7 @@ apiPoke.getPokemonDetail = pokemon => {
     .then(convertPokeDetails)
 }
 
-apiPoke.getApiPokemons = async (offset = 0, limit = 10) => {
+apiPoke.getApiPokemons = async (offset = 0, limit = 2) => {
   const url = `https://pokeapi.co/api/v2/pokemon?offset${offset}&limit=${limit}`
 
   try {
